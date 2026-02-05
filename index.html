@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom TTF Fonts</title>
+  <style>
+    /* Load the custom font using @font-face */
+    @font-face {
+      font-family: "MulsahkFont";
+      src: url("Mulsahk.ttf") format("truetype");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    /* Apply fonts based on class */
+    span.mulsahk {
+      font-family: "MulsahkFont", Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    span.english {
+      font-family: Sans-serif;
+    }
+  </style>
+</head>
+<body>
+    <p>To say "hi" in mulsahk is <span class="mulsahk">eb</span></p>
+</body>
+</html>
