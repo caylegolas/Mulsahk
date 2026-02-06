@@ -3,28 +3,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom TTF Fonts</title>
+  <title>Mulsahk Language</title>
   <style>
-    /* Load the custom font using @font-face */
+    /* Custom font */
     @font-face {
       font-family: "MulsahkFont";
       src: url("Mulsahk.ttf") format("truetype");
-      font-weight: bold;
+      font-weight: normal;
       font-style: normal;
     }
 
-    /* Apply fonts based on class */
-    span.mulsahk {
-      font-family: "MulsahkFont", Arial, sans-serif;
-      font-weight: bold;
+    /* General page style */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefcf3;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
 
-    span.english {
-      font-family: Sans-serif;
+    header {
+      background-color: #3b3a30;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
     }
+
+    header h1 {
+      font-family: "MulsahkFont", serif;
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #3b3a30;
+      border-bottom: 2px solid #3b3a30;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    /* Alphabet grid */
+    .alphabet {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .dictionary {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .letter-card {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .letter-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .letter-card m {
+      font-family: "MulsahkFont", serif;
+      font-size: 2rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .letter-card .pronunciation {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .letter-card .example {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+    .dictionary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 entries per row */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.dictionary .letter-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.dictionary .letter-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.dictionary .letter-card span.mulsahk {
+  font-family: "MulsahkFont", serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.dictionary .letter-card span.ipa {
+  font-style: italic;
+  color: #555;
+}
+
+.dictionary .letter-card span.english {
+  font-weight: 600;
+}
+
   </style>
 </head>
 <body>
-    <h1>Mulsahk(<span class="mulsahk">wylsae</span>)</h1>
+  <header>
+    <h1><m>wylsae</m></h1>
+    <p>Mulsahk, the constructed language by Cayden Rogers</p>
+  </header>
+
+  <main>
+    <h2>About Mulsahk</h2>
+    <p>Mulsahk is a conlang (constructed language) developed by Cayden Rogers. This website is dedicated
+      to exploring the alphabet, pronunciation, and unique aspects of the Mulsahk language. The font
+      reflects handwritten glyphs created specifically for Mulsahk.</p>
+
+    <h2>Alphabet</h2>
+    <div class="alphabet">
+      <div class="letter-card">
+        <m>a</m>
+        <div class="pronunciation">"ah"</div>
+        <div class="example">f(ah)ther = "father"</div>
+      </div>
+      <div class="letter-card">
+        <m>b</m>
+        <div class="pronunciation">"voo"</div>
+        <div class="example">(voo)doo = "voodoo"</div>
+      </div>
+      <div class="letter-card">
+        <m>c</m>
+        <div class="pronunciation">"cuh"</div>
+        <div class="example">(cuh)mputer = "computer"</div>
+      </div>
+      <div class="letter-card">
+        <m>d</m>
+        <div class="pronunciation">"duh"</div>
+        <div class="example">mu(duh) = "mud"</div>
+      </div>
+      <div class="letter-card">
+        <m>e</m>
+        <div class="pronunciation">"fuh"</div>
+        <div class="example">(fuh)n = "fun"</div>
+      </div>
+      <div class="letter-card">
+        <m>f</m>
+        <div class="pronunciation">"ere"</div>
+        <div class="example">air = "air"</div>
+      </div>
+      <div class="letter-card">
+        <m>g</m>
+        <div class="pronunciation">"guh"</div>
+        <div class="example">(guh)n = "gun"</div>
+      </div>
+      <div class="letter-card">
+        <m>h</m>
+        <div class="pronunciation">"sh"</div>
+        <div class="example">(sh)ow = "show"</div>
+      </div>
+      <div class="letter-card">
+        <m>i</m>
+        <div class="pronunciation">"huh"</div>
+        <div class="example">(huh)ome = "home"</div>
+      </div>
+      <div class="letter-card">
+        <m>j</m>
+        <div class="pronunciation">"yuh"</div>
+        <div class="example">(yuh)mmy = "yummy"</div>
+      </div>
+      <div class="letter-card">
+        <m>k</m>
+        <div class="pronunciation">"khll"</div>
+        <div class="example">(like saying call but keeping tongue on ridge behind teeth)</div>
+      </div>
+      <div class="letter-card">
+        <m>l</m>
+        <div class="pronunciation">"luh"</div>
+        <div class="example">(luh)ck = "luck"</div>
+      </div>
+      <div class="letter-card">
+        <m>m</m>
+        <div class="pronunciation">"nnn"</div>
+        <div class="example">(nnn)o = "no"</div>
+      </div>
+      <div class="letter-card">
+        <m>n</m>
+        <div class="pronunciation">"wuh"</div>
+        <div class="example">(wuh)onder = "wonder"</div>
+      </div>
+      <div class="letter-card">
+        <m>o</m>
+        <div class="pronunciation">"ooo"</div>
+        <div class="example">f(oo)d = "food"</div>
+      </div>
+      <div class="letter-card">
+        <m>p</m>
+        <div class="pronunciation">"buh"</div>
+        <div class="example">(buh)nny = "bunny"</div>
+      </div>
+      <div class="letter-card">
+        <m>q</m>
+        <div class="pronunciation">"en"</div>
+        <div class="example">(en)cyclopedia = "encyclopedia"</div>
+      </div>
+      <div class="letter-card">
+        <m>r</m>
+        <div class="pronunciation">"rr"</div>
+        <div class="example">(rr)ace = "race"</div>
+      </div>
+      <div class="letter-card">
+        <m>s</m>
+        <div class="pronunciation">"sss"</div>
+        <div class="example">(sss)nake = "snake"</div>
+      </div>
+      <div class="letter-card">
+        <m>t</m>
+        <div class="pronunciation">"zjah"</div>
+        <div class="example">(zjah)nre = "genre"</div>
+      </div>
+      <div class="letter-card">
+        <m>u</m>
+        <div class="pronunciation">"ih"</div>
+        <div class="example">(ih)gloo = "igloo"</div>
+      </div>
+      <div class="letter-card">
+        <m>v</m>
+        <div class="pronunciation">"vuh"</div>
+        <div class="example">(vuh)lnerable = "vulnerable"</div>
+      </div>
+      <div class="letter-card">
+        <m>w</m>
+        <div class="pronunciation">"mmm"</div>
+        <div class="example">(mmm)om = "mom"</div>
+      </div>
+      <div class="letter-card">
+        <m>x</m>
+        <div class="pronunciation">"ck"</div>
+        <div class="example">tru(ck) = "truck"</div>
+      </div>
+      <div class="letter-card">
+        <m>y</m>
+        <div class="pronunciation">"ue"</div>
+        <div class="example">you = "you"</div>
+      </div>
+      <div class="letter-card">
+        <m>z</m>
+        <div class="pronunciation">"ya"</div>
+        <div class="example">(ya)cht = "yacht"</div>
+      </div>
+    </div>
+    <h2>Dictionary</h2>
+    <p>For pronunciation I recommand this website: <a href="https://ipa-reader.com/">Ipa Tts</a></p>
+<div class="dictionary" id="dictionary"></div>
+
+<script>
+  // Single array of dictionary entries: [english, mulsahk, ipa]
+  const dictionaryEntries = [
+    ["hi(I)", "eb", "faɪ"],        // 01=a, 02=b → "ab"
+    ["hello(I,N)", "ebw", "faɪvm"],
+    ["yes(A,N,I)", "kah", "dɪˈa"], // example
+    ["no(A)", "qu", "vjo"], // example
+    ["I(P,N)", "I", "ɛk"],
+    ["you(P,A,N)", "vIb", "viːk"]
+  ];
+
+  const dictionaryContainer = document.getElementById("dictionary");
+
+  // Loop through array and create dictionary cards
+  dictionaryEntries.forEach(([english, mulsahk, ipa]) => {
+    const card = document.createElement("div");
+    card.classList.add("letter-card");
+
+    const englishSpan = document.createElement("span");
+    englishSpan.classList.add("english");
+    englishSpan.textContent = english;
+
+    const arrow1 = document.createTextNode(" → ");
+
+    const mulsahkSpan = document.createElement("span");
+    mulsahkSpan.classList.add("mulsahk");
+    mulsahkSpan.innerHTML = `<m>${mulsahk}</m>`;
+
+    const arrow2 = document.createTextNode(" → ");
+
+    const ipaSpan = document.createElement("span");
+    ipaSpan.classList.add("ipa");
+    ipaSpan.textContent = ipa;
+
+    card.appendChild(englishSpan);
+    card.appendChild(arrow1);
+    card.appendChild(mulsahkSpan);
+    card.appendChild(arrow2);
+    card.appendChild(ipaSpan);
+
+    dictionaryContainer.appendChild(card);
+  });
+</script>
+
+  </main>
 </body>
 </html>
